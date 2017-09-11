@@ -14,11 +14,89 @@
    <string>Game</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pole1_1">
+   <widget class="QPushButton" name="pole0_0">
     <property name="geometry">
      <rect>
       <x>130</x>
       <y>70</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole0_1">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>70</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole0_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole1_0">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>145</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole1_1">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>145</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole1_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>145</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pole2_0">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>215</y>
       <width>75</width>
       <height>75</height>
      </rect>
@@ -31,33 +109,7 @@
     <property name="geometry">
      <rect>
       <x>205</x>
-      <y>70</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole3_1">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>70</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole1_2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>145</y>
+      <y>215</y>
       <width>75</width>
       <height>75</height>
      </rect>
@@ -67,58 +119,6 @@
     </property>
    </widget>
    <widget class="QPushButton" name="pole2_2">
-    <property name="geometry">
-     <rect>
-      <x>205</x>
-      <y>145</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole3_2">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>145</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole1_3">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>215</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole2_3">
-    <property name="geometry">
-     <rect>
-      <x>205</x>
-      <y>215</y>
-      <width>75</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pole3_3">
     <property name="geometry">
      <rect>
       <x>280</x>

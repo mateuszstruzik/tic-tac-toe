@@ -1,20 +1,26 @@
 #pragma once
 
+#include <vector>
+#include <iostream>
 #include <QMouseEvent>
 #include "qlabel.h"
 
 #include "ui_Game.h"
+
+using namespace std;
 class Gamerestriction
 {
 public:
 	Gamerestriction();
 	~Gamerestriction();
 
-	void mouseclickedcounttt(QMouseEvent *event);//, int &clickcount);
+	int mouseclickedcounttt(QMouseEvent *event);//, int &clickcount);
 	void clickview(Ui::GameClass ui, QLabel *countcheck);
+	bool clickrest( int x, int y);
+	void checkchange(int x, int y);
 
 private:
 	int click = 0;
-
+	vector<vector<bool>> check;
 };
 

@@ -1,5 +1,5 @@
-﻿  Game.cpp
-  gamerestriction.cpp
+﻿  Moc'ing Game.h...
+  Game.cpp
   moc_Game.cpp
   main.cpp
   Generating Code...

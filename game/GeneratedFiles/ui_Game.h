@@ -28,15 +28,15 @@ class Ui_GameClass
 {
 public:
     QWidget *centralWidget;
+    QPushButton *pole0_0;
+    QPushButton *pole0_1;
+    QPushButton *pole0_2;
+    QPushButton *pole1_0;
     QPushButton *pole1_1;
-    QPushButton *pole2_1;
-    QPushButton *pole3_1;
     QPushButton *pole1_2;
+    QPushButton *pole2_0;
+    QPushButton *pole2_1;
     QPushButton *pole2_2;
-    QPushButton *pole3_2;
-    QPushButton *pole1_3;
-    QPushButton *pole2_3;
-    QPushButton *pole3_3;
     QLabel *countcheck;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -49,33 +49,33 @@ public:
         GameClass->resize(680, 500);
         centralWidget = new QWidget(GameClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        pole0_0 = new QPushButton(centralWidget);
+        pole0_0->setObjectName(QStringLiteral("pole0_0"));
+        pole0_0->setGeometry(QRect(130, 70, 75, 75));
+        pole0_1 = new QPushButton(centralWidget);
+        pole0_1->setObjectName(QStringLiteral("pole0_1"));
+        pole0_1->setGeometry(QRect(205, 70, 75, 75));
+        pole0_2 = new QPushButton(centralWidget);
+        pole0_2->setObjectName(QStringLiteral("pole0_2"));
+        pole0_2->setGeometry(QRect(280, 70, 75, 75));
+        pole1_0 = new QPushButton(centralWidget);
+        pole1_0->setObjectName(QStringLiteral("pole1_0"));
+        pole1_0->setGeometry(QRect(130, 145, 75, 75));
         pole1_1 = new QPushButton(centralWidget);
         pole1_1->setObjectName(QStringLiteral("pole1_1"));
-        pole1_1->setGeometry(QRect(130, 70, 75, 75));
-        pole2_1 = new QPushButton(centralWidget);
-        pole2_1->setObjectName(QStringLiteral("pole2_1"));
-        pole2_1->setGeometry(QRect(205, 70, 75, 75));
-        pole3_1 = new QPushButton(centralWidget);
-        pole3_1->setObjectName(QStringLiteral("pole3_1"));
-        pole3_1->setGeometry(QRect(280, 70, 75, 75));
+        pole1_1->setGeometry(QRect(205, 145, 75, 75));
         pole1_2 = new QPushButton(centralWidget);
         pole1_2->setObjectName(QStringLiteral("pole1_2"));
-        pole1_2->setGeometry(QRect(130, 145, 75, 75));
+        pole1_2->setGeometry(QRect(280, 145, 75, 75));
+        pole2_0 = new QPushButton(centralWidget);
+        pole2_0->setObjectName(QStringLiteral("pole2_0"));
+        pole2_0->setGeometry(QRect(130, 215, 75, 75));
+        pole2_1 = new QPushButton(centralWidget);
+        pole2_1->setObjectName(QStringLiteral("pole2_1"));
+        pole2_1->setGeometry(QRect(205, 215, 75, 75));
         pole2_2 = new QPushButton(centralWidget);
         pole2_2->setObjectName(QStringLiteral("pole2_2"));
-        pole2_2->setGeometry(QRect(205, 145, 75, 75));
-        pole3_2 = new QPushButton(centralWidget);
-        pole3_2->setObjectName(QStringLiteral("pole3_2"));
-        pole3_2->setGeometry(QRect(280, 145, 75, 75));
-        pole1_3 = new QPushButton(centralWidget);
-        pole1_3->setObjectName(QStringLiteral("pole1_3"));
-        pole1_3->setGeometry(QRect(130, 215, 75, 75));
-        pole2_3 = new QPushButton(centralWidget);
-        pole2_3->setObjectName(QStringLiteral("pole2_3"));
-        pole2_3->setGeometry(QRect(205, 215, 75, 75));
-        pole3_3 = new QPushButton(centralWidget);
-        pole3_3->setObjectName(QStringLiteral("pole3_3"));
-        pole3_3->setGeometry(QRect(280, 215, 75, 75));
+        pole2_2->setGeometry(QRect(280, 215, 75, 75));
         countcheck = new QLabel(centralWidget);
         countcheck->setObjectName(QStringLiteral("countcheck"));
         countcheck->setGeometry(QRect(400, 70, 121, 21));
@@ -99,15 +99,15 @@ public:
     void retranslateUi(QMainWindow *GameClass)
     {
         GameClass->setWindowTitle(QApplication::translate("GameClass", "Game", Q_NULLPTR));
+        pole0_0->setText(QString());
+        pole0_1->setText(QString());
+        pole0_2->setText(QString());
+        pole1_0->setText(QString());
         pole1_1->setText(QString());
-        pole2_1->setText(QString());
-        pole3_1->setText(QString());
         pole1_2->setText(QString());
+        pole2_0->setText(QString());
+        pole2_1->setText(QString());
         pole2_2->setText(QString());
-        pole3_2->setText(QString());
-        pole1_3->setText(QString());
-        pole2_3->setText(QString());
-        pole3_3->setText(QString());
         countcheck->setText(QApplication::translate("GameClass", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
