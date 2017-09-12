@@ -2,11 +2,16 @@
 
 
 
-Winrule::Winrule():score(3, vector<char>(3)), clicked(3,vector<bool>(3))
+Winrule::Winrule():whatmark(3, vector<char>(3)),buckup_whatmark(3,vector<char>(3)), clicked(3,vector<bool>(3))
 {
-	score[0][0] = '/';
-	score[1][1] = '/';
-	score[2][2] = '/';
+	whatmark[0][0] = '/';
+	whatmark[1][1] = '/';
+	whatmark[2][2] = '/';
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+			buckup_whatmark[i][j] = whatmark[i][j];
+	}
 }
 
 
@@ -14,28 +19,31 @@ Winrule::~Winrule()
 {
 }
 
-void Winrule::scorerestriction()
+void Winrule::scorerestriction(QPushButton *button, vector<vector<bool>> check)
 {
 	char x = 'X';
 	char o = 'O';
 	if (int a = res1())
 	{
-		if (score[0][0] == x)
+		if (whatmark[0][0] == x)
 		{
 			points[0] = points[0] + 1;
 			lastpoint = x;
+			
 		}
 		else
 		{
 			points[1] = points[1] + 1;
 			lastpoint = o;
 		}
+		whatmark_restore();
+		pushbutton_reset(button);
 	}
 }
 
 void Winrule::pass_x_or_o(char mark, int x, int y)
 {
-	score[x][y] = mark;
+	whatmark[x][y] = mark;
 }
 
 void Winrule::point_send(Ui::GameClass ui, QLabel *pointview1, QLabel *pointview2)
@@ -49,9 +57,22 @@ void Winrule::point_send(Ui::GameClass ui, QLabel *pointview1, QLabel *pointview
 	}
 }
 
+void Winrule::whatmark_restore()
+{
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++)
+			whatmark[i][j] = buckup_whatmark[i][j];
+	}
+}
+
+void Winrule::pushbutton_reset(QPushButton * button)
+{
+	button->setText("");
+}
+
 int Winrule::res1()
 {
-	if (score[0][0] == score[0][1] && score[0][1] == score[0][2])
+	if (whatmark[0][0] == whatmark[0][1] && whatmark[0][1] == whatmark[0][2])
 	{
 		return 1;
 	}
