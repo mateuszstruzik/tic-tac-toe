@@ -141,7 +141,77 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>moves</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xpoints">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>120</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>X points</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="opoints">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>160</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>Y points</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="xpointsview">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>120</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="opointsview">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>160</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string></string>
     </property>
    </widget>
   </widget>

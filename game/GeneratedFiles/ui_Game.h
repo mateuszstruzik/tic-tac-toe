@@ -38,6 +38,10 @@ public:
     QPushButton *pole2_1;
     QPushButton *pole2_2;
     QLabel *countcheck;
+    QLabel *xpoints;
+    QLabel *opoints;
+    QLabel *xpointsview;
+    QLabel *opointsview;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -79,6 +83,24 @@ public:
         countcheck = new QLabel(centralWidget);
         countcheck->setObjectName(QStringLiteral("countcheck"));
         countcheck->setGeometry(QRect(400, 70, 121, 21));
+        xpoints = new QLabel(centralWidget);
+        xpoints->setObjectName(QStringLiteral("xpoints"));
+        xpoints->setGeometry(QRect(400, 120, 50, 20));
+        xpoints->setFrameShape(QFrame::Box);
+        xpoints->setFrameShadow(QFrame::Plain);
+        opoints = new QLabel(centralWidget);
+        opoints->setObjectName(QStringLiteral("opoints"));
+        opoints->setGeometry(QRect(400, 160, 50, 20));
+        opoints->setFrameShape(QFrame::Box);
+        opoints->setFrameShadow(QFrame::Plain);
+        xpointsview = new QLabel(centralWidget);
+        xpointsview->setObjectName(QStringLiteral("xpointsview"));
+        xpointsview->setGeometry(QRect(465, 120, 140, 20));
+        xpointsview->setFrameShape(QFrame::WinPanel);
+        opointsview = new QLabel(centralWidget);
+        opointsview->setObjectName(QStringLiteral("opointsview"));
+        opointsview->setGeometry(QRect(465, 160, 140, 20));
+        opointsview->setFrameShape(QFrame::WinPanel);
         GameClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(GameClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -108,7 +130,11 @@ public:
         pole2_0->setText(QString());
         pole2_1->setText(QString());
         pole2_2->setText(QString());
-        countcheck->setText(QApplication::translate("GameClass", "TextLabel", Q_NULLPTR));
+        countcheck->setText(QApplication::translate("GameClass", "moves", Q_NULLPTR));
+        xpoints->setText(QApplication::translate("GameClass", "X points", Q_NULLPTR));
+        opoints->setText(QApplication::translate("GameClass", "Y points", Q_NULLPTR));
+        xpointsview->setText(QString());
+        opointsview->setText(QString());
     } // retranslateUi
 
 };

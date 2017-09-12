@@ -27,9 +27,10 @@ int Gamerestriction::mouseclickedcounttt(QMouseEvent * event)//, int & clickcoun
 	/*ui.countcheck->setText(QString::number(clickcount));*/
 }
 
-void Gamerestriction::clickview(Ui::GameClass ui,QLabel *countcheck )
+void Gamerestriction::clickview(QLabel *countcheck1 )//Ui::GameClass ui,
 {
-	ui.countcheck->setText(QString::number(click));
+	//ui.
+		countcheck1->setText(QString::number(click));
 }
 
 bool Gamerestriction::clickrest(int x , int y)

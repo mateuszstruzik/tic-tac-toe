@@ -15,7 +15,7 @@ public:
 	~Gamerestriction();
 
 	int mouseclickedcounttt(QMouseEvent *event);//, int &clickcount);
-	void clickview(Ui::GameClass ui, QLabel *countcheck);
+	void clickview( QLabel *countcheck);// Ui::GameClass ui,
 	bool clickrest( int x, int y);
 	void checkchange(int x, int y);
 

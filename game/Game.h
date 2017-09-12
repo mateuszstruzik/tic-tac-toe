@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "gamerestriction.h"
+#include "Winrule.h"
 
 #include <QtWidgets/QMainWindow>
 #include <QMouseEvent>
@@ -39,6 +40,7 @@ private:
 	const QPointF mouseb;
 	QMouseEvent *newmouseevent = new QMouseEvent(QEvent::MouseButtonPress,mouseb, Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
 	Gamerestriction gamerestriction;
+	Winrule winrule;
 
 	//vector<bool> check = {0,0,0};
 };
