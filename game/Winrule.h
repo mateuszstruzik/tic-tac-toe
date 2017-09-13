@@ -15,7 +15,7 @@ public:
 	Winrule();
 	~Winrule();
 
-	void scorerestriction(QPushButton *button, vector<vector<bool>> check);
+	void scorerestriction(/*QPushButton *button, vector<vector<bool>> check*/);
 	void pass_x_or_o(char mark, int x, int y);
 	void point_send(Ui::GameClass ui, QLabel *pointview1, QLabel *pointview2);
 	void whatmark_restore();

@@ -4,6 +4,9 @@ Game::Game(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+
+	gamerestriction.butttt[1] = ui.pole0_1;
+	gamerestriction.butttt[0] = ui.pole0_2;
 }
 
 void Game::on_pole0_0_clicked()
@@ -22,7 +25,11 @@ void Game::on_pole0_0_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(0, 0);
-		winrule.scorerestriction();
+		//winrule.scorerestriction();
+		if (winrule.res1()) {
+			gamerestriction.butttt[1]->setText(" ");
+			gamerestriction.butttt[0]->setText(" ");
+		}
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -40,7 +47,7 @@ void Game::on_pole0_1_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(0, 1);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -60,7 +67,7 @@ void Game::on_pole0_2_clicked()
 			clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 			gamerestriction.clickview(ui.countcheck);
 			gamerestriction.checkchange(0, 2);
-			winrule.scorerestriction();
+//			winrule.scorerestriction();
 			winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 		}
 	}
@@ -79,7 +86,7 @@ void Game::on_pole1_0_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(1, 0);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -99,7 +106,7 @@ void Game::on_pole1_1_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(1, 1);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -119,7 +126,7 @@ void Game::on_pole1_2_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(1, 2);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -140,7 +147,7 @@ void Game::on_pole2_0_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(2, 0);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -161,7 +168,7 @@ void Game::on_pole2_1_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(2, 1);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }
@@ -182,7 +189,7 @@ void Game::on_pole2_2_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(2, 2);
-		winrule.scorerestriction();
+//		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }

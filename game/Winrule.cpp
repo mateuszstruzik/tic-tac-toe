@@ -19,7 +19,7 @@ Winrule::~Winrule()
 {
 }
 
-void Winrule::scorerestriction(QPushButton *button, vector<vector<bool>> check)
+void Winrule::scorerestriction(/*QPushButton *button, vector<vector<bool>> check*/)
 {
 	char x = 'X';
 	char o = 'O';
@@ -37,7 +37,7 @@ void Winrule::scorerestriction(QPushButton *button, vector<vector<bool>> check)
 			lastpoint = o;
 		}
 		whatmark_restore();
-		pushbutton_reset(button);
+		//pushbutton_reset(button);
 	}
 }
 

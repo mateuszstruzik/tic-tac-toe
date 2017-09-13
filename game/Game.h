@@ -42,5 +42,7 @@ private:
 	Gamerestriction gamerestriction;
 	Winrule winrule;
 
+	
+
 	//vector<bool> check = {0,0,0};
 };
