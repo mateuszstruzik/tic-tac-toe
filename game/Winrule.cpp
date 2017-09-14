@@ -36,7 +36,7 @@ void Winrule::scorerestriction(/*QPushButton *button, vector<vector<bool>> check
 			points[1] = points[1] + 1;
 			lastpoint = o;
 		}
-		whatmark_restore();
+		//whatmark_restore();
 		//pushbutton_reset(button);
 	}
 }

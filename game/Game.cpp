@@ -1,12 +1,14 @@
 #include "Game.h"
 
 Game::Game(QWidget *parent)
-	: QMainWindow(parent)
+	: QMainWindow(parent), buttonsvector(3,vector<QPushButton*>(3))
 {
 	ui.setupUi(this);
 
-	gamerestriction.butttt[1] = ui.pole0_1;
-	gamerestriction.butttt[0] = ui.pole0_2;
+	buttonsvector[0][0] = ui.pole0_0;
+	buttonsvector[0][1] = ui.pole0_1;
+	buttonsvector[0][2] = ui.pole0_2;
+
 }
 
 void Game::on_pole0_0_clicked()
@@ -25,10 +27,14 @@ void Game::on_pole0_0_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(0, 0);
-		//winrule.scorerestriction();
+		winrule.scorerestriction();
 		if (winrule.res1()) {
-			gamerestriction.butttt[1]->setText(" ");
-			gamerestriction.butttt[0]->setText(" ");
+			buttonsvector[0][0]->setStyleSheet("background-color: grey");
+			buttonsvector[0][1]->setStyleSheet("background-color: grey");
+			buttonsvector[0][2]->setStyleSheet("background-color: grey");
+	
+			QMessageBox::StandardButton ok = QMessageBox::information(this, "Point score", "Some player score points", QMessageBox::Ok);
+
 		}
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
@@ -86,7 +92,7 @@ void Game::on_pole1_0_clicked()
 		clickcount = gamerestriction.mouseclickedcounttt(newmouseevent);
 		gamerestriction.clickview(ui.countcheck);
 		gamerestriction.checkchange(1, 0);
-//		winrule.scorerestriction();
+		winrule.scorerestriction();
 		winrule.point_send(ui, ui.xpointsview, ui.opointsview);
 	}
 }

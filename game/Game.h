@@ -1,12 +1,14 @@
 #pragma once
 
 #include <vector>
+#include <Windows.h>
 
 #include "gamerestriction.h"
 #include "Winrule.h"
 
 #include <QtWidgets/QMainWindow>
 #include <QMouseEvent>
+#include "qmessagebox.h"
 #include "ui_Game.h"
 
 using namespace std;
@@ -32,6 +34,8 @@ public:
 	
 public:
 	void mouseclickedcount(QMouseEvent *event, int &clickcount);
+
+	vector<vector<QPushButton*>> buttonsvector;
 
 
 private:

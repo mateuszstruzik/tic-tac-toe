@@ -24,7 +24,7 @@ public:
 	int res1();
 
 private:
-	int points[2];
+	int points[2] = { 0,0 };
 	char lastpoint;
 	vector<vector<char>> whatmark;
 	vector<vector<char>> buckup_whatmark;

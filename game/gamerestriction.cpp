@@ -2,7 +2,7 @@
 
 
 
-Gamerestriction::Gamerestriction(): check(3, vector<bool>(3)), butttt(2)
+Gamerestriction::Gamerestriction(): check(3, vector<bool>(3))//, butttt(2)
 {
 	for (int i = 0; i < 3; i++)
 	{
@@ -18,7 +18,7 @@ Gamerestriction::~Gamerestriction()
 {
 }
 
-int Gamerestriction::mouseclickedcounttt(QMouseEvent * event)//, int & clickcount)
+int Gamerestriction::mouseclickedcounttt(QMouseEvent * event)
 {
 	if (event->button() == Qt::LeftButton)
 	{
@@ -26,7 +26,7 @@ int Gamerestriction::mouseclickedcounttt(QMouseEvent * event)//, int & clickcoun
 	}
 
 	return click;
-	/*ui.countcheck->setText(QString::number(clickcount));*/
+	
 }
 
 void Gamerestriction::clickview(QLabel *countcheck1 )//Ui::GameClass ui,
