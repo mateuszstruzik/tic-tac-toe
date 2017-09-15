@@ -19,34 +19,57 @@ Winrule::~Winrule()
 {
 }
 
-void Winrule::scorerestriction(/*QPushButton *button, vector<vector<bool>> check*/)
+void Winrule::scorerestriction(vector<vector<QPushButton *>> buttons, QWidget *pa, Gamerestriction &a, QLabel *pointview1, QLabel *pointview2/*, vector<vector<bool>> check*/)
 {
 	char x = 'X';
 	char o = 'O';
-	if (int a = res1())
+	if (res1() || res2())
 	{
-		if (whatmark[0][0] == x)
+		if (lastpoint == x)
 		{
 			points[0] = points[0] + 1;
-			lastpoint = x;
+			//lastpoint = x;
 			
 		}
 		else
 		{
 			points[1] = points[1] + 1;
-			lastpoint = o;
+			//lastpoint = o;
 		}
 		//whatmark_restore();
 		//pushbutton_reset(button);
+
+		buttons[par[0]][par[1]]->setStyleSheet("background-color: grey");
+		buttons[par[2]][par[3]]->setStyleSheet("background-color: grey");
+		buttons[par[4]][par[5]]->setStyleSheet("background-color: grey");
+
+		QMessageBox::StandardButton ok = QMessageBox::information(pa, "Point score", "Some player score points, loser starts next party", QMessageBox::Ok);
+		if (ok == QMessageBox::Ok) {
+			for (int i = 0; i < 2; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					if (a.check_checl(i, j))
+					{
+						buttons[i][j]->setText(" ");
+						buttons[i][j]->setStyleSheet("");
+					}
+				}
+			}
+			a.check_restore();
+			whatmark_restore();
+		}
+		point_send(pointview1, pointview2);
 	}
 }
 
 void Winrule::pass_x_or_o(char mark, int x, int y)
 {
 	whatmark[x][y] = mark;
+	lastpoint = whatmark[x][y];
 }
 
-void Winrule::point_send(Ui::GameClass ui, QLabel *pointview1, QLabel *pointview2)
+void Winrule::point_send(/*Ui::GameClass ui,*/ QLabel *pointview1, QLabel *pointview2)
 {
 	if (lastpoint == 'X') {
 		pointview1->setText(QString::number(points[0]));
@@ -74,9 +97,22 @@ int Winrule::res1()
 {
 	if (whatmark[0][0] == whatmark[0][1] && whatmark[0][1] == whatmark[0][2])
 	{
+		par[0] = 0; par[1] = 0; par[2] = 0; par[3] = 1; par[4] = 0; par[5] = 2;
 		return 1;
+		
 	}
 	else 
 		return 0;
 	
+}
+
+int Winrule::res2()
+{
+	if ((whatmark[1][0] == whatmark[1][1] && whatmark[1][1] == whatmark[1][2]))
+	{
+		par[0] = 1; par[1] = 0; par[2] = 1; par[3] = 1; par[4] = 1; par[5] = 2;
+		return 1;
+	}
+	else
+		return 0;
 }

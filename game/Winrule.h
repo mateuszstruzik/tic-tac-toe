@@ -3,9 +3,12 @@
 #include <iostream>
 #include <vector>
 
+#include "gamerestriction.h"
+
 #include "ui_Game.h"
 #include "qlabel.h"
 #include "qpushbutton.h"
+#include "qmessagebox.h"
 
 using namespace std;
 
@@ -15,15 +18,18 @@ public:
 	Winrule();
 	~Winrule();
 
-	void scorerestriction(/*QPushButton *button, vector<vector<bool>> check*/);
+	void scorerestriction(vector<vector<QPushButton *>> buttons, QWidget *pa, Gamerestriction &a, QLabel *pointview1, QLabel *pointview2/*vector<vector<bool>> check*/);
 	void pass_x_or_o(char mark, int x, int y);
-	void point_send(Ui::GameClass ui, QLabel *pointview1, QLabel *pointview2);
+	void point_send(/*Ui::GameClass ui, */QLabel *pointview1, QLabel *pointview2);
 	void whatmark_restore();
 	void pushbutton_reset(QPushButton *button);
 
+
 	int res1();
+	int res2();
 
 private:
+	int par[6];
 	int points[2] = { 0,0 };
 	char lastpoint;
 	vector<vector<char>> whatmark;

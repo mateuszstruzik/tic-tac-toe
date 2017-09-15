@@ -20,6 +20,8 @@ class Game : public QMainWindow
 public:
 	Game(QWidget *parent = Q_NULLPTR);
 
+
+
 	private slots :
 
 	void on_pole0_0_clicked();

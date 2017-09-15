@@ -2,12 +2,14 @@
 
 
 
-Gamerestriction::Gamerestriction(): check(3, vector<bool>(3))//, butttt(2)
+Gamerestriction::Gamerestriction(): check(3, vector<bool>(3)), buckup_check(3,vector<bool>(3))//, butttt(2)
 {
 	for (int i = 0; i < 3; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < 3; j++) {
 			check[i][j] = 1;
+			buckup_check[i][j] = check[i][j];
+		}
 	}
 
 	
@@ -50,5 +52,21 @@ bool Gamerestriction::clickrest(int x , int y)
 void Gamerestriction::checkchange(int x, int y)
 {
 	check[x][y] = 0;
+}
+
+void Gamerestriction::check_restore()
+{
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++)
+			check[i][j] = buckup_check[i][j];
+	}
+}
+
+bool Gamerestriction::check_checl(int x, int y)
+{
+	if (check[x][y] == 0)
+		return true;
+	else
+		return false;
 }
 
