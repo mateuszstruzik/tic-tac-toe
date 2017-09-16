@@ -23,10 +23,17 @@ public:
 	void point_send(/*Ui::GameClass ui, */QLabel *pointview1, QLabel *pointview2);
 	void whatmark_restore();
 	void pushbutton_reset(QPushButton *button);
-
+	int allrules();
 
 	int res1();
 	int res2();
+	int res3();
+	int res4();
+	int res5();
+	int res6();
+	int res7();
+	int res8();
+	int res9(Gamerestriction &a);
 
 private:
 	int par[6];
